@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Contract conformance for .NET object graphs: canonicalize, constrain, and propose changes without mutating.</Description>
+    <IsAotCompatible>true</IsAotCompatible>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Conform.Tests" />
+    <InternalsVisibleTo Include="Conform.Annotations" />
+  </ItemGroup>
+</Project>

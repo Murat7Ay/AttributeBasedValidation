@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Conform\Conform.csproj" />
+    <ProjectReference Include="..\..\src\Conform.Annotations\Conform.Annotations.csproj" />
+    <ProjectReference Include="..\..\legacy\Legacy.csproj" />
+  </ItemGroup>
+</Project>
