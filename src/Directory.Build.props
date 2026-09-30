@@ -1,0 +1,26 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- NuGet package metadata shared by Conform.Net and Conform.Net.Annotations. -->
+  <PropertyGroup>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>preview.1</VersionSuffix>
+    <Authors>Murat Ay</Authors>
+    <Copyright>Copyright (c) 2019-2026 Murat Ay</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Murat7Ay/AttributeBasedValidation</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Murat7Ay/AttributeBasedValidation</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>validation;normalization;dataannotations;object-graph;canonicalization;fluentvalidation-alternative;aspnetcore;dto;csharp;dotnet</PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)PACKAGE_README.md" Pack="true" PackagePath="README.md" Visible="false" />
+  </ItemGroup>
+</Project>

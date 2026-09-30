@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <PackageId>Conform.Net.Annotations</PackageId>
     <Description>Attribute adapter for Conform: reads DataAnnotations plus normalization, traversal and scenario attributes.</Description>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591</NoWarn>

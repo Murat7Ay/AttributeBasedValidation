@@ -7,6 +7,9 @@ the **canonical form** of every value, and it **never mutates your objects unles
 > Think *"parse, don't validate"* (the Pydantic / Zod idea) for .NET object graphs. It works with the
 > `DataAnnotations` attributes you already use.
 
+[![NuGet](https://img.shields.io/nuget/vpre/Conform.Net?label=Conform.Net)](https://www.nuget.org/packages/Conform.Net)
+[![CI](https://github.com/Murat7Ay/AttributeBasedValidation/actions/workflows/ci.yml/badge.svg)](https://github.com/Murat7Ay/AttributeBasedValidation/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![.NET 10](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-latest-239120)](https://learn.microsoft.com/dotnet/csharp/)
 [![Dependencies](https://img.shields.io/badge/core%20dependencies-0-brightgreen)](src/Conform/Conform.csproj)
@@ -75,8 +78,10 @@ Conform answers three questions **in one declaration and one pass**:
 
 ## Quick start
 
-> Conform is not on NuGet yet. Clone the repo and reference `src/Conform` (and optionally
-> `src/Conform.Annotations`).
+```bash
+dotnet add package Conform.Net --prerelease               # core (no dependencies)
+dotnet add package Conform.Net.Annotations --prerelease   # optional: DataAnnotations / attribute support
+```
 
 ```csharp
 using Conform;
@@ -399,7 +404,7 @@ dotnet run --project samples/Conform.Example
 | `samples/Conform.Example` | end-to-end demo |
 | `benchmarks/Conform.Benchmarks` | BenchmarkDotNet comparison |
 
-Issues and pull requests are welcome. Well-known canonicalizers (E.164 phone numbers, IBAN, postal codes) would be
+Licensed under [MIT](LICENSE). Issues and pull requests are welcome. Well-known canonicalizers (E.164 phone numbers, IBAN, postal codes) would be
 especially valuable.
 
 If Conform saves you from writing another trim-strip-validate-assign handler, **consider giving it a ⭐**.
