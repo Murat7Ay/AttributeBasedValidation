@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the untouched 2019 sources in the repository root, by link, so they can be
+       characterized and benchmarked. Program.cs (interactive Main) is deliberately excluded. -->
+  <PropertyGroup>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>Legacy.ValidationHelper</AssemblyName>
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\ValidationHelper.cs" Link="Legacy\ValidationHelper.cs" />
+    <Compile Include="..\Attributes\*.cs" Link="Legacy\Attributes\%(Filename)%(Extension)" />
+    <Compile Include="..\Models\*.cs" Link="Legacy\Models\%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/Conform.Benchmarks/Conform.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/legacy/">
+    <Project Path="legacy/Legacy.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Conform.Example/Conform.Example.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Conform.Annotations/Conform.Annotations.csproj" />
+    <Project Path="src/Conform/Conform.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Conform.Characterization.Tests/Conform.Characterization.Tests.csproj" />
+    <Project Path="tests/Conform.Tests/Conform.Tests.csproj" />
+  </Folder>
+</Solution>

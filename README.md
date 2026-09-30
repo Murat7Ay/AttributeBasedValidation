@@ -1,3 +1,43 @@
+# AttributeBasedValidation → Conform
+
+This repository started in 2019 as a 230-line reflection-based validation helper (preserved untouched in the root:
+`ValidationHelper.cs`, `Attributes/`, `Models/`, `Program.cs`). An architectural archaeology in 2026 found that its
+one durable idea was not "attribute-based validation" but **judging a value by its canonical form and optionally
+committing that form**. `Conform` is that idea rebuilt from first principles:
+
+```csharp
+var registry = new ContractRegistry()
+    .Define<Order>(c =>
+    {
+        c.Member(o => o.Phone).Required()
+            .Normalize(Normalizers.DigitsOnly, Normalizers.KeepLast(10))  // canonical form
+            .Matches(@"^5\d{9}$");                                          // judged on the canonical form
+        c.Member(o => o.Lines).Required().Count(min: 1).Descend();
+    })
+    .UseAnnotations(); // DataAnnotations + [Trim]/[DigitsOnly]/[Descend]/... for everything else
+
+var report = new ConformanceEngine(registry).Evaluate(order); // pure: findings + proposed changes
+if (report.IsConformant) report.Apply();                        // explicit, conflict-checked writes
+```
+
+| Read | For |
+|---|---|
+| [docs/research/ARCHAEOLOGY.md](docs/research/ARCHAEOLOGY.md) | what the 2019 code really does, and what idea was hiding in it |
+| [docs/research/ADR-*.md](docs/research/) | the three architectural decisions |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | how Conform works; legacy → new concept map |
+| [docs/MIGRATION.md](docs/MIGRATION.md) | attribute mapping; legacy behavior intentionally not preserved |
+| [docs/research/FINAL_REVIEW.md](docs/research/FINAL_REVIEW.md) | honest assessment, benchmarks, weaknesses |
+| `samples/Conform.Example` | `dotnet run --project samples/Conform.Example` |
+
+```
+dotnet test Conform.slnx
+dotnet run -c Release --project benchmarks/Conform.Benchmarks -- --filter '*'
+```
+
+---
+
+## Legacy README (2019, unchanged)
+
 # AttributeBasedValidation
 Attribute based validation -- reflection
 
