@@ -343,8 +343,7 @@ Conform is that idea rebuilt from first principles.
 - 🔁 [Migration guide](docs/MIGRATION.md): mapping from the `Smart*` attributes
 - ⚖️ [Final review](docs/research/FINAL_REVIEW.md): an honest assessment, including reasons *not* to use this
 
-The original 2019 sources are preserved untouched in the repository root (`ValidationHelper.cs`, `Attributes/`,
-`Models/`, `Program.cs`) and are pinned by characterization tests.
+The original 2019 sources were removed from `master`; they live on at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019).
 
 <details>
 <summary>Original 2019 README example</summary>
@@ -397,7 +396,6 @@ dotnet run --project samples/Conform.Example
 | `src/Conform` | core engine (no dependencies) |
 | `src/Conform.Annotations` | DataAnnotations and attribute adapter |
 | `tests/Conform.Tests` | 104 behavior tests: graphs, mutation, diagnostics, extensibility |
-| `tests/Conform.Characterization.Tests` | tests pinning the 2019 behavior |
 | `samples/Conform.Example` | end-to-end demo |
 | `benchmarks/Conform.Benchmarks` | BenchmarkDotNet comparison |
 

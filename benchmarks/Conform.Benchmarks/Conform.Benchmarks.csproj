@@ -11,6 +11,5 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Conform\Conform.csproj" />
     <ProjectReference Include="..\..\src\Conform.Annotations\Conform.Annotations.csproj" />
-    <ProjectReference Include="..\..\legacy\Legacy.csproj" />
   </ItemGroup>
 </Project>

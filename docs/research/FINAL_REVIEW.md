@@ -11,7 +11,7 @@ The 2019 repository is a ~230-line validation helper. It is worse than it looks:
 - It overwrites dates unconditionally under a flag called `changeIfDefault`.
 - Its "ignore" scenario flag silently stops working one level down.
 
-All of this is pinned by 16 characterization tests against the unmodified sources.
+All of this was pinned by 16 characterization tests against the unmodified sources during the rebuild.
 
 Constraint checking accounts for about 70% of its surface: required, length, regex, date, child recursion and
 collection count. That part is **obsolete**. DataAnnotations covers the rules, FluentValidation covers code-first
@@ -38,7 +38,7 @@ and Zod, applied in place to an existing .NET object graph. The mainstream .NET 
 - **`src/Conform.Annotations`**: an adapter that reads BCL DataAnnotations. `[Required]` becomes presence, and any
   other `ValidationAttribute` becomes a rule judged against the canonical value. It adds normalization, traversal and
   scenario attributes.
-- **Tests**: 104 behavioral tests and 16 (+1 skipped) characterization tests.
+- **Tests**: 104 behavioral tests. (16 characterization tests of the legacy code were removed together with it.)
 - **Also**: a realistic example, BenchmarkDotNet comparisons, and three ADRs.
 
 ## What We Deliberately Did Not Preserve
@@ -96,8 +96,8 @@ Without that half this project should not exist. With it, it is a small but real
   - a null root as a finding
   - whitespace treated as missing
   - an unanchored regex in `Rules.Matches`
-- **History:** the legacy sources are untouched in the repository root and compiled by link (`legacy/Legacy.csproj`)
-  for characterization tests and benchmarks.
+- **History:** the legacy sources, their characterization tests and the legacy benchmark baseline were removed
+  from `master` after the rebuild. They remain at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019) and in git history.
 
 ## Test Coverage
 

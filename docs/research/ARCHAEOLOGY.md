@@ -7,8 +7,9 @@
 > numbers, e-commerce vocabulary such as "Barcode" and "AppointmentDate").
 >
 > Every claim below comes from reading the code. The few runtime claims that surprised me were
-> confirmed by compiling the untouched legacy files in a scratch project; the same claims are now
-> locked in by `tests/Conform.Characterization.Tests`.
+> confirmed by compiling the untouched legacy files in a scratch project. Characterization tests pinned
+> them during the rebuild; those tests and the legacy sources now live at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019)
+> and in the history of `master`. File and line references below refer to that tag.
 
 ---
 

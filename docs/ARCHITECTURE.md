@@ -208,9 +208,7 @@ when no canonical form exists, and override `NormalizeMissing()` to supply defau
 |---|---|---|
 | `src/Conform` | model, rules, normalizers, builder, registry, engine, report | none (BCL only); `IsAotCompatible` |
 | `src/Conform.Annotations` | attribute adapter and attributes | `Conform`, BCL DataAnnotations; reflection (`RequiresUnreferencedCode`) |
-| `legacy/` | the untouched 2019 sources, compiled by link | none |
 | `tests/Conform.Tests` | behavior, graph, mutation, diagnostics, extensibility and annotation tests | xUnit |
-| `tests/Conform.Characterization.Tests` | pins legacy behavior | xUnit, `legacy` |
 | `samples/Conform.Example` | end-to-end demo | both packages |
 | `benchmarks/Conform.Benchmarks` | legacy vs. code contracts vs. annotations | BenchmarkDotNet |
 

@@ -2,14 +2,14 @@
 
 ## Decision: no compatibility adapter for the `Smart*` attributes
 
-Most observable legacy behavior is buggy (see `tests/Conform.Characterization.Tests`). An adapter would face a
+Most observable legacy behavior is buggy (see ARCHAEOLOGY §2.2). An adapter would face a
 choice:
 
 - reproduce those bugs, which is worthless; or
 - silently change behavior under the old names, which is dangerous.
 
 The legacy code base is also 400 lines with one entry point, so hand-migrating a model is fast. The legacy sources
-remain in the repository root, untouched, and still compile (`legacy/Legacy.csproj`).
+are kept at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019).
 
 ## Attribute mapping
 
