@@ -97,7 +97,7 @@ Without that half this project should not exist. With it, it is a small but real
   - whitespace treated as missing
   - an unanchored regex in `Rules.Matches`
 - **History:** the legacy sources, their characterization tests and the legacy benchmark baseline were removed
-  from `master` after the rebuild. They remain at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019) and in git history.
+  from `master` after the rebuild. They remain at the [`legacy-2019` tag](https://github.com/Murat7Ay/Conform/tree/legacy-2019) and in git history.
 
 ## Test Coverage
 

@@ -42,4 +42,4 @@ public class Customer
 ```
 
 📖 Documentation, comparison with FluentValidation/DataAnnotations, and benchmarks:
-https://github.com/Murat7Ay/AttributeBasedValidation
+https://github.com/Murat7Ay/Conform

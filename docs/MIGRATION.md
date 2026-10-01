@@ -9,7 +9,7 @@ choice:
 - silently change behavior under the old names, which is dangerous.
 
 The legacy code base is also 400 lines with one entry point, so hand-migrating a model is fast. The legacy sources
-are kept at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019).
+are kept at the [`legacy-2019` tag](https://github.com/Murat7Ay/Conform/tree/legacy-2019).
 
 ## Attribute mapping
 

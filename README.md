@@ -8,7 +8,7 @@ the **canonical form** of every value, and it **never mutates your objects unles
 > `DataAnnotations` attributes you already use.
 
 [![NuGet](https://img.shields.io/nuget/vpre/Conform.Net?label=Conform.Net)](https://www.nuget.org/packages/Conform.Net)
-[![CI](https://github.com/Murat7Ay/AttributeBasedValidation/actions/workflows/ci.yml/badge.svg)](https://github.com/Murat7Ay/AttributeBasedValidation/actions/workflows/ci.yml)
+[![CI](https://github.com/Murat7Ay/Conform/actions/workflows/ci.yml/badge.svg)](https://github.com/Murat7Ay/Conform/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![.NET 10](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-latest-239120)](https://learn.microsoft.com/dotnet/csharp/)
@@ -348,7 +348,7 @@ Conform is that idea rebuilt from first principles.
 - 🔁 [Migration guide](docs/MIGRATION.md): mapping from the `Smart*` attributes
 - ⚖️ [Final review](docs/research/FINAL_REVIEW.md): an honest assessment, including reasons *not* to use this
 
-The original 2019 sources were removed from `master`; they live on at the [`legacy-2019` tag](https://github.com/Murat7Ay/AttributeBasedValidation/tree/legacy-2019).
+The original 2019 sources were removed from `master`; they live on at the [`legacy-2019` tag](https://github.com/Murat7Ay/Conform/tree/legacy-2019).
 
 <details>
 <summary>Original 2019 README example</summary>

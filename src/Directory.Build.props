@@ -8,8 +8,8 @@
     <Authors>Murat Ay</Authors>
     <Copyright>Copyright (c) 2019-2026 Murat Ay</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Murat7Ay/AttributeBasedValidation</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Murat7Ay/AttributeBasedValidation</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Murat7Ay/Conform</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Murat7Ay/Conform</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>validation;normalization;dataannotations;object-graph;canonicalization;fluentvalidation-alternative;aspnetcore;dto;csharp;dotnet</PackageTags>

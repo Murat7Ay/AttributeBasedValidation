@@ -19,7 +19,7 @@ jobs:
 
   # Push a tag such as v0.1.0 or v0.1.0-preview.1 to publish that version.
   # Uses nuget.org Trusted Publishing (OIDC): no long-lived API key is stored anywhere.
-  # Setup: nuget.org → Trusted Publishing policy (owner Murat7Ay, repo AttributeBasedValidation,
+  # Setup: nuget.org → Trusted Publishing policy (owner Murat7Ay, repo Conform,
   # workflow file ci.yml), and the repository secret NUGET_USER = your nuget.org profile name (not e-mail).
   publish:
     if: startsWith(github.ref, 'refs/tags/v')
